@@ -1,0 +1,21 @@
+<h1>Edit task</h1>
+
+<%= form_for(@task) do |f| %>
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %><br>
+    <%= f.text_field :title, class: "form-text" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :details, class: "form-label" %><br>
+    <%= f.text_area :details, class: "form-text" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :completed, class: "form-label"%><br>
+    <%= f.text_area :completed, class: "form-text" %>
+  </div>
+  <div class="mb-3">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= link_to "Back to list", tasks_path, {class: "btn btn-primary"} %>
